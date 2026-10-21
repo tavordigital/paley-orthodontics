@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contact – Paley Orthodontics</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F9F9FB}
+a{color:#302B79}a:hover{color:#17163A}
+.wrap{max-width:1240px;margin:0 auto;padding-left:40px;padding-right:40px;box-sizing:border-box;width:100%}
+.mob{display:none}
+.navlink{color:#17163A;text-decoration:none;font-size:16px;padding:12px 4px;border-bottom:2px solid transparent}
+.navlink:hover{color:#302B79;border-bottom-color:#5CB0E5}
+.navlink[aria-current="page"]{color:#302B79;border-bottom-color:#302B79;font-weight:600}
+.btn-primary{background:#302B79;color:#FFFFFF;text-decoration:none}
+.btn-primary:hover{background:#17163A;color:#FFFFFF}
+.btn-ghost{color:#302B79;text-decoration:none;box-shadow:inset 0 0 0 1.5px #302B79}
+.btn-ghost:hover{background:#302B79;color:#FFFFFF}
+.textlink{color:#302B79;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
+.textlink:hover{color:#17163A}
+.onindigo{color:#FFFFFF;text-decoration:underline;text-underline-offset:4px}
+.onindigo:hover{color:#BFE0F5}
+.namebtn{background:transparent;border:0;color:#4F4E68;cursor:pointer}
+.namebtn:hover{color:#302B79}
+.field{width:100%;box-sizing:border-box;font:inherit;font-size:17px;color:#17163A;background:#FFFFFF;border:1.5px solid #C9CBD8;border-radius:10px;padding:14px 16px}
+.field:focus{outline:none;border-color:#302B79;box-shadow:0 0 0 3px rgba(92,176,229,.45)}
+a:focus-visible,button:focus-visible{outline:3px solid #5CB0E5;outline-offset:3px}
+img{display:block}
+header{background-color:#F9F9FB !important}
+main section > .wrap,footer > .wrap{position:relative;z-index:1}
+.finder,.band{position:relative;overflow:hidden}
+.finder > *,.band > *{position:relative;z-index:1}
+.band-ind .qbar{background:#5CB0E5}
+.band-ind .reviews{border-top-color:#5CB0E5 !important}
+.band-ind blockquote{color:#FFFFFF !important}
+.band-ind figure > div{background:rgba(255,255,255,.22) !important}
+.band-ind .namebtn{color:#D6D5EC !important}
+.band-ind .namebtn[aria-pressed="true"]{color:#FFFFFF !important;border-bottom-color:#5CB0E5 !important}
+.band-ind .namebtn:hover{color:#FFFFFF !important}
+.band-ind button[aria-label$="reviews"]{color:#FFFFFF !important}
+.band-ind button[aria-label="Previous review"]{box-shadow:inset 0 0 0 1.5px #FFFFFF !important;color:#FFFFFF !important}
+.band-ind button[aria-label="Next review"]{background:#5CB0E5 !important;color:#302B79 !important}
+.ftlink{color:#FFFFFF;text-decoration:underline;text-underline-offset:4px}
+.ftlink:hover{color:#BFE0F5}
+.ftnav{color:#FFFFFF}
+.ftnav:hover{color:#FFFFFF;border-bottom-color:#5CB0E5}
+footer .navlink{color:#FFFFFF}
+footer .navlink:hover{color:#FFFFFF;border-bottom-color:#5CB0E5}
+footer .textlink{color:#FFFFFF}
+footer .textlink:hover{color:#BFE0F5}
+footer img{filter:brightness(0) invert(1)}
+footer p{color:#D6D5EC !important}
+footer .wrap > div:last-child{border-top-color:rgba(255,255,255,.22) !important;color:#D6D5EC !important}
+.brk{position:absolute;width:0;height:0;opacity:0;transform-origin:0 0}
+.brk-pad{position:absolute;left:-7px;top:-9.5px;width:14px;height:19px;background:#5CB0E5;border-radius:1.5px}
+.brk-core{position:absolute;left:-3.1px;top:-4.5px;width:6.2px;height:9px;background:#302B79}
+.brk-line{position:absolute;left:-7px;top:-0.75px;width:14px;height:1.5px;background:#302B79}
+.hero-sec:not(.sec){padding-bottom:56px}
+main > section:not(.dark){background-image:url(/_blob/9e15603f1e601eb407820e7ac2ff336c),linear-gradient(rgba(48,43,121,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(48,43,121,.07) 1px,transparent 1px),linear-gradient(rgba(48,43,121,.032) 1px,transparent 1px),linear-gradient(90deg,rgba(48,43,121,.032) 1px,transparent 1px) !important;background-size:160px 160px,50px 50px,50px 50px,10px 10px,10px 10px !important}
+main > section.dark,footer{background-image:linear-gradient(rgba(92,176,229,.15) 1px,transparent 1px),linear-gradient(90deg,rgba(92,176,229,.15) 1px,transparent 1px),linear-gradient(rgba(92,176,229,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(92,176,229,.06) 1px,transparent 1px) !important;background-size:50px 50px,50px 50px,10px 10px,10px 10px !important}
+section.dark{color:#FFFFFF}
+section.dark h1,section.dark h2,section.dark h3{color:#FFFFFF !important}
+section.dark p,section.dark dd,section.dark nav{color:#D6D5EC !important}
+section.dark .textlink{color:#FFFFFF}
+section.dark .textlink:hover{color:#BFE0F5}
+section.dark .btn-primary{background:#FFFFFF;color:#302B79}
+section.dark .btn-primary:hover{background:#BFE0F5;color:#302B79}
+section.dark .btn-ghost{color:#FFFFFF;box-shadow:inset 0 0 0 1.5px #FFFFFF}
+section.dark .btn-ghost:hover{background:#FFFFFF;color:#302B79}
+section.dark dl > div,section.dark li{border-color:rgba(255,255,255,.22) !important}
+@media (max-width: 860px){
+.brk-pad{left:-5px;top:-6.75px;width:10px;height:13.5px}
+.brk-core{left:-2.2px;top:-3.2px;width:4.4px;height:6.4px}
+.brk-line{left:-5px;top:-0.6px;width:10px;height:1.2px}
+.band-ind{padding-top:72px !important;padding-bottom:72px !important}
+.hero-sec:not(.sec){padding-bottom:36px}
+}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes floaty{from{transform:translateY(0)}to{transform:translateY(-12px)}}
+.bg-wire{position:absolute;left:0;width:100%;pointer-events:none;z-index:0}
+.w-path{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s cubic-bezier(.6,0,.2,1) .3s forwards}
+.w-float{animation:floaty 6s ease-in-out 2.8s infinite alternate}
+.hero-sec,footer{position:relative;overflow:hidden}
+.hero-sec > .wrap,footer > .wrap{position:relative;z-index:1}
+@media (prefers-reduced-motion: reduce){.w-path{stroke-dashoffset:0 !important}}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes headerin{from{background-color:rgba(245,246,249,1);box-shadow:0 0 0 rgba(23,22,58,0)}to{background-color:rgba(245,246,249,.88);box-shadow:0 1px 0 #DCDDE6,0 12px 32px rgba(23,22,58,.07)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(95,211,148,.6)}70%{box-shadow:0 0 0 10px rgba(95,211,148,0)}100%{box-shadow:0 0 0 0 rgba(95,211,148,0)}}
+@keyframes qin{from{opacity:0;transform:translateX(32px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+header{position:sticky;top:0;z-index:30}
+.progress{position:fixed;left:0;top:0;width:100%;height:3px;background:#5CB0E5;transform-origin:0 50%;transform:scaleX(0);z-index:40;pointer-events:none}
+.load-rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.1s}.d2{animation-delay:.22s}.d3{animation-delay:.34s}.d4{animation-delay:.46s}.d5{animation-delay:.58s}
+.live-dot{animation:pulse 2.2s ease-out infinite}
+.is-paused,.is-paused *{animation-play-state:paused !important}
+.qin{animation:qin .8s cubic-bezier(.2,.7,.2,1) both}
+.qbar{height:100%;background:#302B79;transform-origin:0 50%;animation:grow 8s linear both}
+.reviews:hover .qbar,.reviews:focus-within .qbar{animation-play-state:paused}
+.mbar{animation:rise .6s cubic-bezier(.2,.7,.2,1) .8s both}
+.btn-primary,.btn-ghost{transition:background-color .25s,color .25s,transform .25s,box-shadow .25s}
+.btn-primary:hover,.btn-ghost:hover{transform:translateY(-2px)}
+.btn-primary:active,.btn-ghost:active{transform:translateY(0)}
+.navlink{transition:color .2s,border-color .2s}
+.field{transition:border-color .2s,box-shadow .2s}
+@supports (animation-timeline: view()){
+.progress{animation:grow linear both;animation-timeline:scroll(root)}
+header{animation:headerin linear both;animation-timeline:scroll(root);animation-range:0 160px}
+}
+@media (prefers-reduced-motion: reduce){
+*,*::before,*::after{animation:none !important;transition:none !important}
+}
+@media (max-width: 860px){
+.desk{display:none !important}
+.mob{display:flex !important}
+.wrap{padding-left:20px;padding-right:20px}
+.sec{padding-top:72px !important;padding-bottom:72px !important}
+.h2{font-size:36px !important}
+.formcard{padding:24px !important}
+}
+</style>
+</helmet>
+<div data-wire-root="1" style="font-family: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif; color: #17163A; background: #F9F9FB; font-size: 17px; line-height: 1.6; min-height: 400px; position: relative; isolation: isolate; overflow-x: clip">
+
+<div class="progress" aria-hidden="true"></div>
+<div class="desk" style="background: #302B79; color: #FFFFFF; font-size: 14px">
+<div class="wrap" style="display: flex; justify-content: space-between; align-items: center; gap: 24px; min-height: 40px">
+<div style="display: flex; align-items: center; gap: 10px">
+<span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: {{statusDotLight}}"></span>
+<span><strong style="font-weight: 600">{{statusLabel}}</strong> · {{statusDetail}}</span>
+</div>
+<div style="display: flex; align-items: center; gap: 24px">
+<span>37 Yigael Yadin, Modiin</span>
+<a class="onindigo" href="https://waze.com/ul?q=37%20Yigael%20Yadin%2C%20Modiin&amp;navigate=yes">Directions in Waze</a>
+<a class="onindigo" href="https://braces.co.il/he" lang="he" hreflang="he">עברית</a>
+</div>
+</div>
+</div>
+
+<header style="background: #F9F9FB">
+<div class="wrap" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 18px; padding-bottom: 18px">
+<a href="Main.dc.html" aria-label="Paley Orthodontics, home" style="display: flex">
+<img src="/_blob/2e5fc5910ed49f7788829d871dfdee2e" alt="Paley Orthodontics" style="height: 56px; width: auto">
+</a>
+<nav class="desk" aria-label="Main" style="display: flex; align-items: center; gap: 28px">
+<a class="navlink" href="About.dc.html">About</a>
+<a class="navlink" href="Children.dc.html">Children</a>
+<a class="navlink" href="Adults.dc.html">Adults</a>
+<a class="navlink" href="Contact.dc.html" aria-current="page">Contact</a>
+</nav>
+<div class="desk" style="display: flex; align-items: center; gap: 12px">
+<a class="btn-ghost" href="tel:+97289729410" style="display: flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 999px; font-weight: 600; font-size: 16px">08-972-9410</a>
+<a class="btn-primary" href="#consult" style="display: flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; font-weight: 600; font-size: 16px">Book a consultation</a>
+</div>
+<div class="mob" style="align-items: center; gap: 8px">
+<a class="textlink" href="https://braces.co.il/he" lang="he" hreflang="he" style="padding: 12px 8px; font-size: 16px">עברית</a>
+<button type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuExpanded}}" aria-controls="mobile-menu" style="min-height: 48px; padding: 0 18px; border-radius: 999px; border: 0; box-shadow: inset 0 0 0 1.5px #302B79; background: transparent; color: #302B79; font: inherit; font-weight: 600; font-size: 16px">{{menuLabel}}</button>
+</div>
+</div>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
+<nav id="mobile-menu" aria-label="Main" class="wrap" style="display: flex; flex-direction: column; padding-bottom: 20px">
+<a class="navlink" href="About.dc.html" style="font-size: 20px; padding: 14px 0; border-bottom: 1px solid #DCDDE6">About</a>
+<a class="navlink" href="Children.dc.html" style="font-size: 20px; padding: 14px 0; border-bottom: 1px solid #DCDDE6">Orthodontics for children</a>
+<a class="navlink" href="Adults.dc.html" style="font-size: 20px; padding: 14px 0; border-bottom: 1px solid #DCDDE6">Orthodontics for adults</a>
+<a class="navlink" href="Contact.dc.html" aria-current="page" style="font-size: 20px; padding: 14px 0">Contact</a>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 16px">
+<a class="btn-primary" href="#consult" onClick="{{closeMenu}}" style="display: flex; align-items: center; justify-content: center; min-height: 52px; border-radius: 999px; font-weight: 600; font-size: 17px">Book a consultation</a>
+<div style="display: flex; gap: 10px">
+<a class="btn-ghost" href="tel:+97289729410" style="flex: 1; display: flex; align-items: center; justify-content: center; min-height: 52px; border-radius: 999px; font-weight: 600; font-size: 16px">Call 08-972-9410</a>
+<a class="btn-ghost" href="https://waze.com/ul?q=37%20Yigael%20Yadin%2C%20Modiin&amp;navigate=yes" style="flex: 1; display: flex; align-items: center; justify-content: center; min-height: 52px; border-radius: 999px; font-weight: 600; font-size: 16px">Waze</a>
+</div>
+</div>
+</nav>
+</sc-if>
+</header>
+
+<main>
+<section id="consult" class="sec hero-sec" aria-labelledby="page-title" style="padding-top: 40px; padding-bottom: 112px; background: #F2F9FD">
+<div class="wrap">
+<nav aria-label="Breadcrumb" style="font-size: 15px; color: #4F4E68; margin-bottom: 18px"><a class="textlink" href="Main.dc.html">Home</a> / Contact us</nav>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(460px, 100%), 1fr)); gap: 48px 72px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<h1 id="page-title" class="load-rise d1" style="margin: 0; font-size: clamp(52px, 8vw, 104px); line-height: 0.95; letter-spacing: -0.035em; font-weight: 600; color: #302B79">Contact us</h1>
+<p class="load-rise d2" style="margin: 0; font-size: 20px; color: #4F4E68">Book a consultation or ask us anything. Send your details and we'll get back to you, or call <a class="textlink" href="tel:+97289729410" style="font-weight: 600">08-972-9410</a>.</p>
+<sc-if value="{{notSent}}" hint-placeholder-val="{{ true }}">
+<form class="formcard load-rise d3" onSubmit="{{submit}}" style="display: flex; flex-direction: column; gap: 18px; background: #FFFFFF; border-radius: 20px; padding: 32px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="c-name" style="font-weight: 600; font-size: 16px">Full name <span style="font-weight: 400; color: #4F4E68">(required)</span></label>
+<input id="c-name" class="field" type="text" name="FullName" autocomplete="name" required="required">
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="c-phone" style="font-weight: 600; font-size: 16px">Phone <span style="font-weight: 400; color: #4F4E68">(required)</span></label>
+<input id="c-phone" class="field" type="tel" name="Phone" autocomplete="tel" inputmode="tel" required="required">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="c-email" style="font-weight: 600; font-size: 16px">Email <span style="font-weight: 400; color: #4F4E68">(required)</span></label>
+<input id="c-email" class="field" type="email" name="Email" autocomplete="email" required="required">
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="c-msg" style="font-weight: 600; font-size: 16px">Message</label>
+<textarea id="c-msg" class="field" name="message" rows="5" style="resize: vertical"></textarea>
+</div>
+<button type="submit" class="btn-primary" style="min-height: 56px; border: 0; border-radius: 999px; font: inherit; font-size: 18px; font-weight: 600; cursor: pointer">Send</button>
+<p style="margin: 0; font-size: 13px; color: #4F4E68">This site is protected by reCAPTCHA and the Google <a class="textlink" href="https://policies.google.com/privacy">Privacy Policy</a> and <a class="textlink" href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+</form>
+</sc-if>
+<sc-if value="{{sent}}" hint-placeholder-val="{{ false }}">
+<div role="status" style="background: #FFFFFF; border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 24px; font-weight: 600; color: #302B79">Thank you. Your message has been sent.</p>
+<p style="margin: 0; color: #4F4E68">For anything urgent, call the office on 08-972-9410.</p>
+</div>
+</sc-if>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 32px; padding-top: 8px">
+<div class="load-rise d4" style="display: flex; flex-direction: column; gap: 18px">
+<h2 style="margin: 0; font-size: 22px; font-weight: 600">Contact details</h2>
+<dl style="margin: 0; display: flex; flex-direction: column">
+<div style="display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 16px 0; border-top: 1.5px solid #302B79">
+<dt style="color: #4F4E68">Address</dt>
+<dd style="margin: 0; font-weight: 600; font-size: 19px">37 Yigael Yadin, Modiin</dd>
+</div>
+<div style="display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 16px 0; border-top: 1px solid #DCDDE6">
+<dt style="color: #4F4E68">Phone</dt>
+<dd style="margin: 0; font-size: 19px"><a class="textlink" href="tel:+97289729410" style="font-weight: 600">08-972-9410</a></dd>
+</div>
+<div style="display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 16px 0; border-top: 1px solid #DCDDE6">
+<dt style="color: #4F4E68">Email</dt>
+<dd style="margin: 0; font-size: 19px"><a class="textlink" href="mailto:smile@braces.co.il" style="font-weight: 600">smile@braces.co.il</a></dd>
+</div>
+<div style="display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 16px 0; border-top: 1px solid #DCDDE6; border-bottom: 1px solid #DCDDE6">
+<dt style="color: #4F4E68">Facebook</dt>
+<dd style="margin: 0; font-size: 19px"><a class="textlink" href="https://www.facebook.com/modiinorthodontist/" style="font-weight: 600">modiinorthodontist</a></dd>
+</div>
+</dl>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="btn-primary" href="https://waze.com/ul?q=37%20Yigael%20Yadin%2C%20Modiin&amp;navigate=yes" style="display: flex; align-items: center; min-height: 52px; padding: 0 24px; border-radius: 999px; font-weight: 600">Navigate with Waze</a>
+<a class="btn-ghost" href="tel:+97289729410" style="display: flex; align-items: center; min-height: 52px; padding: 0 22px; border-radius: 999px; font-weight: 600">Call the office</a>
+</div>
+</div>
+
+<div class="load-rise d5" style="background: #302B79; color: #FFFFFF; border-radius: 20px; padding: 32px">
+<div style="display: flex; align-items: center; gap: 10px; margin-bottom: 18px">
+<span class="{{dotClass}}" aria-hidden="true" style="width: 10px; height: 10px; border-radius: 50%; background: {{statusDotLight}}"></span>
+<p style="margin: 0; font-size: 18px"><strong style="font-weight: 600">{{statusLabel}}</strong> · {{statusDetail}}</p>
+</div>
+<h2 style="margin: 0 0 8px; font-size: 22px; font-weight: 600">Office hours</h2>
+<table style="width: 100%; border-collapse: collapse; font-size: 17px">
+<caption style="position: absolute; left: -9999px">Office hours, Israel time</caption>
+<tbody>
+<sc-for list="{{hours}}" as="h" hint-placeholder-count="7">
+<tr style="border-top: 1px solid rgba(255,255,255,.22); font-weight: {{h.weight}}; color: {{h.color}}">
+<th scope="row" style="text-align: left; padding: 11px 0; font-weight: inherit">{{h.day}}<span style="color: #BFE0F5; font-weight: 500">{{h.todayTag}}</span></th>
+<td style="text-align: right; padding: 11px 0">{{h.time}}</td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="band-ind dark" data-band="1" aria-labelledby="reviews-title" style="background: #302B79; color: #FFFFFF; padding-top: 96px; padding-bottom: 96px">
+<div class="wrap">
+<div class="reviews" style="border-top: 1.5px solid #302B79; padding-top: 40px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 16px">
+<h2 id="reviews-title" style="margin: 0; font-size: 22px; font-weight: 600">What our patients say</h2>
+<p style="margin: 0; color: #4F4E68; font-size: 16px">{{reviewCount}}</p>
+</div>
+<div aria-live="{{reviewLive}}" style="min-height: 250px">
+<sc-if value="{{rA}}" hint-placeholder-val="{{ true }}">
+<figure class="qin" style="margin: 0; display: flex; flex-direction: column; gap: 24px">
+<blockquote style="margin: 0; font-size: clamp(26px, 3.4vw, 42px); line-height: 1.25; letter-spacing: -0.02em; font-weight: 500; color: #302B79; text-wrap: pretty; max-width: 1040px">“{{reviewText}}”</blockquote>
+<figcaption style="font-size: 18px; font-weight: 600">{{reviewName}}</figcaption>
+<div aria-hidden="true" style="height: 2px; width: 240px; max-width: 100%; background: #DCDDE6; overflow: hidden"><div class="qbar {{qbarClass}}" onAnimationEnd="{{autoNext}}"></div></div>
+</figure>
+</sc-if>
+<sc-if value="{{rB}}" hint-placeholder-val="{{ false }}">
+<figure class="qin" style="margin: 0; display: flex; flex-direction: column; gap: 24px">
+<blockquote style="margin: 0; font-size: clamp(26px, 3.4vw, 42px); line-height: 1.25; letter-spacing: -0.02em; font-weight: 500; color: #302B79; text-wrap: pretty; max-width: 1040px">“{{reviewText}}”</blockquote>
+<figcaption style="font-size: 18px; font-weight: 600">{{reviewName}}</figcaption>
+<div aria-hidden="true" style="height: 2px; width: 240px; max-width: 100%; background: #DCDDE6; overflow: hidden"><div class="qbar {{qbarClass}}" onAnimationEnd="{{autoNext}}"></div></div>
+</figure>
+</sc-if>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<div role="group" aria-label="Choose a review" style="display: flex; flex-wrap: wrap; gap: 4px 18px">
+<sc-for list="{{reviewNames}}" as="n" hint-placeholder-count="9">
+<button type="button" class="namebtn" onClick="{{n.pick}}" aria-pressed="{{n.pressed}}" style="font: inherit; font-size: 16px; padding: 10px 0; min-height: 44px; border-bottom: 2px solid {{n.line}}; color: {{n.color}}">{{n.name}}</button>
+</sc-for>
+</div>
+<div style="display: flex; gap: 10px">
+<button type="button" onClick="{{togglePlay}}" aria-label="{{playAria}}" style="min-height: 52px; padding: 0 18px; border-radius: 999px; border: 0; background: transparent; color: #302B79; font: inherit; font-size: 16px; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; cursor: pointer">{{playLabel}}</button>
+<button type="button" onClick="{{prevReview}}" aria-label="Previous review" style="width: 52px; height: 52px; border-radius: 50%; border: 0; box-shadow: inset 0 0 0 1.5px #302B79; background: transparent; color: #302B79; font: inherit; font-size: 22px; cursor: pointer">←</button>
+<button type="button" onClick="{{nextReview}}" aria-label="Next review" style="width: 52px; height: 52px; border-radius: 50%; border: 0; background: #302B79; color: #FFFFFF; font: inherit; font-size: 22px; cursor: pointer">→</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer style="background: #221E5C; color: #FFFFFF">
+<div class="wrap" style="padding-top: 56px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<img src="/_blob/2e5fc5910ed49f7788829d871dfdee2e" alt="Paley Orthodontics" style="height: 64px; width: auto; align-self: flex-start">
+<p style="margin: 0; color: #4F4E68">37 Yigael Yadin, Modiin · <a class="textlink" href="tel:+97289729410">08-972-9410</a> · <a class="textlink" href="mailto:smile@braces.co.il">smile@braces.co.il</a></p>
+<p style="margin: 0; color: #4F4E68; font-size: 15px">Sun, Tue 8:30–18:00 · Wed 8:30–17:00 · Fri 8:00–12:00</p>
+</div>
+<nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 4px 28px; align-items: flex-start">
+<a class="navlink" href="About.dc.html">About</a>
+<a class="navlink" href="Children.dc.html">Children</a>
+<a class="navlink" href="Adults.dc.html">Adults</a>
+<a class="navlink" href="Contact.dc.html">Contact</a>
+<a class="navlink" href="https://www.facebook.com/modiinorthodontist/">Facebook</a>
+<a class="navlink" href="https://braces.co.il/he" lang="he" hreflang="he">עברית</a>
+</nav>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 20px; border-top: 1px solid #DCDDE6; color: #4F4E68; font-size: 14px">
+<span>© 2026 Smile for Life</span>
+<span>Paley Orthodontics · Modiin</span>
+</div>
+</div>
+</footer>
+
+<sc-if value="{{wireOn}}" hint-placeholder-val="{{ false }}">
+<svg aria-hidden="true" viewBox="{{wire.vb}}" style="position: absolute; left: 0; top: 0; width: {{wire.w}}px; height: {{wire.h}}px; z-index: 0; pointer-events: none">
+<defs>
+<clipPath id="wzL"><path d="{{wire.clipL}}"></path></clipPath>
+<clipPath id="wzD"><path d="{{wire.clipD}}"></path></clipPath>
+</defs>
+<path d="{{wire.g0d}}" style="fill: {{wire.g0c}}"></path>
+<path d="{{wire.g1d}}" style="fill: {{wire.g1c}}"></path>
+<path d="{{wire.g2d}}" style="fill: {{wire.g2c}}"></path>
+<path d="{{wire.g3d}}" style="fill: {{wire.g3c}}"></path>
+<path class="wire-path" d="{{wire.d}}" style="clip-path: url(#wzL); fill: none; stroke: #5CB0E5; stroke-width: 2; stroke-opacity: 0.6; stroke-linejoin: round"></path>
+<path class="wire-path" d="{{wire.d}}" style="clip-path: url(#wzD); fill: none; stroke: #5CB0E5; stroke-width: 2; stroke-opacity: 0.95; stroke-linejoin: round"></path>
+</svg>
+<div aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 0; height: 0; z-index: 0; pointer-events: none">
+<sc-for list="{{wire.brackets}}" as="bk" hint-placeholder-count="0">
+<div class="brk" style="left: {{bk.x}}px; top: {{bk.y}}px"><span class="brk-pad"></span><span class="brk-core"></span><span class="brk-line"></span></div>
+</sc-for>
+</div>
+</sc-if>
+
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3500}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { r: 0, menu: false, sent: false, paused: false, flip: false, wire: null };
+  }
+  componentDidMount() {
+    this._t = setInterval(() => this.forceUpdate(), 30000);
+    this._onWScroll = () => {
+      if (this._wraf) return;
+      this._wraf = requestAnimationFrame(() => { this._wraf = null; this.applyWire(); });
+    };
+    this._onWResize = () => { clearTimeout(this._wt); this._wt = setTimeout(() => this.measureWire(), 120); };
+    window.addEventListener('scroll', this._onWScroll, { passive: true });
+    window.addEventListener('resize', this._onWResize);
+    window.addEventListener('load', this._onWResize);
+    try {
+      const wr = document.querySelector('[data-wire-root]');
+      if (wr && window.ResizeObserver) { this._wro = new ResizeObserver(this._onWResize); this._wro.observe(wr); }
+    } catch (e) {}
+    this._wt0 = setTimeout(() => this.measureWire(), 60);
+    this._wt1 = setTimeout(() => this.measureWire(), 1200);
+  }
+  componentWillUnmount() {
+    clearInterval(this._t);
+    window.removeEventListener('scroll', this._onWScroll);
+    window.removeEventListener('resize', this._onWResize);
+    window.removeEventListener('load', this._onWResize);
+    if (this._wro) this._wro.disconnect();
+    clearTimeout(this._wt); clearTimeout(this._wt0); clearTimeout(this._wt1);
+    if (this._wraf) cancelAnimationFrame(this._wraf);
+  }
+  measureWire() {
+    try {
+      const root = document.querySelector('[data-wire-root]');
+      if (!root) return;
+      this._wroot = root;
+      const rr = root.getBoundingClientRect();
+      const W = root.clientWidth, H = root.offsetHeight;
+      if (!W || !H) return;
+      const vh = window.innerHeight || 800;
+      const rel = (el) => { const b = el.getBoundingClientRect(); return { top: b.top - rr.top, bottom: b.bottom - rr.top, left: b.left - rr.left }; };
+      const secs = Array.prototype.slice.call(root.querySelectorAll('main > section'));
+      const foot = root.querySelector('footer');
+      if (!secs.length || !foot) return;
+      const hero = rel(secs[0]);
+      const wrapEl = secs[0].querySelector('.wrap') || secs[0];
+      const pl = parseFloat(window.getComputedStyle(wrapEl).paddingLeft) || 0;
+      const gutter = Math.max(12, rel(wrapEl).left + pl);
+      const mob = W < 700;
+      const xR = W - gutter / 2, xL = gutter / 2;
+      const fr = rel(foot);
+      const bgOf = (el) => window.getComputedStyle(el).backgroundColor;
+      const ah = mob ? 28 : 48;
+      const arcY = (x, yb, dir) => { const u = 2 * x / W - 1; return yb + dir * ah * Math.sqrt(Math.max(0, 1 - u * u)); };
+      // Colour bands: an arch-shaped edge wherever the band colour changes; indigo bands are dark zones.
+      const dark = [], arches = [];
+      secs.forEach((s, k) => {
+        const r = rel(s);
+        if (s.classList.contains('dark')) dark.push([r.top, r.bottom]);
+        const next = k < secs.length - 1 ? secs[k + 1] : foot;
+        if (bgOf(s) !== bgOf(next)) arches.push(next === foot ? { y: fr.top, dir: -1, c: bgOf(foot), f: true } : { y: r.bottom, dir: 1, c: bgOf(s), f: false });
+      });
+      dark.push([fr.top, H]);
+      dark.sort((p, q) => p[0] - q[0]);
+      const inDark = (y) => dark.some((z) => y >= z[0] && y < z[1]);
+      const groups = [];
+      arches.forEach((a) => {
+        let g = null;
+        for (let i = 0; i < groups.length; i++) if (groups[i].c === a.c) g = groups[i];
+        if (!g) { g = { c: a.c, d: '' }; groups.push(g); }
+        g.d += 'M 0 ' + a.y.toFixed(1) + ' A ' + (W / 2).toFixed(1) + ' ' + ah + ' 0 0 ' + (a.dir === 1 ? 0 : 1) + ' ' + W + ' ' + a.y.toFixed(1) + ' Z ';
+      });
+      const rect = (a, b) => 'M 0 ' + a.toFixed(1) + ' H ' + W + ' V ' + b.toFixed(1) + ' H 0 Z ';
+      let clipD = '', clipL = '', cur = 0;
+      dark.forEach((z) => { if (z[0] > cur) clipL += rect(cur, z[0]); clipD += rect(z[0], z[1]); cur = Math.max(cur, z[1]); });
+      if (cur < H) clipL += rect(cur, H);
+      // One continuous archwire: enters from the right edge, runs crooked through the hero, rides along
+      // every arch edge carrying a row of brackets, and closes into a U around the footer.
+      const pts = [];
+      const add = (x, y) => { pts.push([x, y]); };
+      const yE = hero.top + 24, y0 = hero.top + (mob ? 90 : 140);
+      for (let i = 0; i <= 12; i++) {
+        const u = i / 12;
+        add((1 - u) * (1 - u) * (W + 6) + (1 - (1 - u) * (1 - u)) * xR, yE + u * u * (y0 - yE));
+      }
+      const iH0 = pts.length - 1;
+      const A = mob ? Math.max(2, Math.min(4, gutter / 2 - 5)) : Math.max(4, Math.min(18, gutter / 2 - 10));
+      const lam = mob ? 240 : 380;
+      const y1 = Math.max(y0 + 60, hero.bottom - (mob ? 30 : 60));
+      const xw = (y) => (y <= y0 || y >= y1) ? xR : xR + A * (1 - (y - y0) / (y1 - y0)) * Math.sin(2 * Math.PI * (y - y0) / lam);
+      for (let y = y0 + 12; y < y1; y += 12) add(xw(y), y);
+      add(xR, y1);
+      const iH1 = pts.length - 1;
+      let side = 1;
+      const gx = (s) => (s === 1 ? xR : xL);
+      const rows = [];
+      let iF = -1;
+      arches.forEach((a) => {
+        const xa = gx(side), xb = gx(-side);
+        const ya = arcY(xa, a.y, a.dir);
+        if (ya <= pts[pts.length - 1][1] + 2) return;
+        add(xa, ya);
+        if (a.f) iF = pts.length - 1;
+        const i0 = pts.length - 1;
+        const nS = Math.max(24, Math.round(Math.abs(xb - xa) / 20));
+        for (let i = 1; i <= nS; i++) { const x = xa + (xb - xa) * (i / nS); add(x, arcY(x, a.y, a.dir)); }
+        rows.push({ i0: i0, i1: pts.length - 1, y: a.y, f: a.f, k: rows.length });
+        side = -side;
+      });
+      if (iF < 0) iF = pts.length - 1;
+      const xs = gx(side), xo = gx(-side), dxo = -side;
+      const iU = pts.length - 1;
+      const rad = Math.max(6, Math.min(gutter / 2 - 2, mob ? 10 : 56));
+      const yBot = fr.bottom - (mob ? 12 : 18);
+      add(xs, yBot - rad);
+      for (let i = 1; i <= 10; i++) { const a = (i / 10) * Math.PI / 2; add(xs + dxo * rad - dxo * rad * Math.cos(a), yBot - rad + rad * Math.sin(a)); }
+      add(xo - dxo * rad, yBot);
+      for (let i = 1; i <= 10; i++) { const a = (i / 10) * Math.PI / 2; add(xo - dxo * rad + dxo * rad * Math.sin(a), yBot - rad + rad * Math.cos(a)); }
+      add(xo, fr.top + (mob ? 20 : 28));
+      const L = [0];
+      for (let i = 1; i < pts.length; i++) L.push(L[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
+      const tot = L[L.length - 1] || 1;
+      const K = [pts[0][1]];
+      for (let i = 1; i < pts.length; i++) K.push(K[i - 1] + Math.abs(pts[i][1] - pts[i - 1][1]) + 0.15 * Math.abs(pts[i][0] - pts[i - 1][0]));
+      const kf = (pts[iF][1] - K[0]) / Math.max(1, K[iF] - K[0]);
+      const K0 = K[0];
+      for (let i = 0; i < K.length; i++) K[i] = K0 + (K[i] - K0) * kf;
+      const lenAtTip = (tip) => {
+        if (tip <= K[0]) return 0;
+        for (let i = 1; i <= iF; i++) {
+          if (K[i] >= tip) { const u = K[i] > K[i - 1] ? (tip - K[i - 1]) / (K[i] - K[i - 1]) : 1; return L[i - 1] + u * (L[i] - L[i - 1]); }
+        }
+        return L[iF];
+      };
+      const pAt = (s) => {
+        let i = 1;
+        while (i < L.length - 1 && L[i] < s) i++;
+        const u = Math.min(1, Math.max(0, (s - L[i - 1]) / Math.max(1e-6, L[i] - L[i - 1])));
+        const a = pts[i - 1], b = pts[i];
+        return [a[0] + u * (b[0] - a[0]), a[1] + u * (b[1] - a[1]), Math.atan2(b[1] - a[1], b[0] - a[0]) * 180 / Math.PI];
+      };
+      const br = [];
+      const sc = mob ? 0.5 : 1;
+      const zo = (y) => (inDark(y) ? 0.95 : 0.7);
+      const mk = (s, du, dv, a0, t, r, o) => {
+        const q = pAt(s), ang = q[2] * Math.PI / 180, tx = Math.cos(ang), ty = Math.sin(ang);
+        br.push({ x: q[0], y: q[1], rot: q[2], a0: a0, dx: (du * tx - dv * ty) * sc, dy: (du * ty + dv * tx) * sc, t: t, r: r, o: o, lf: s / tot });
+      };
+      const nH = mob ? 5 : 6;
+      const hA = [8, -11, 6, -12, 10, -7], hU = [-30, 24, -12, 34, -20, 14], hV = [7, -6, 9, -8, 5, -7];
+      const hs = L[iH0] + (mob ? 50 : 70), he = Math.max(hs + 40, L[iH1] - (mob ? 50 : 90));
+      for (let i = 0; i < nH; i++) {
+        const s = hs + (he - hs) * (i / (nH - 1));
+        const y = pAt(s)[1];
+        mk(s, hU[i], hV[i], hA[i], Math.max(y - vh * 0.55, 20 + i * 70), vh * 0.32, zo(y));
+      }
+      const rA = [9, -7, 11, -8, 6, -12, 10, -9, 7, -11, 8, -6, 9, -10], rU = [14, -10, 18, -16, 8, -20, 12, -8, 16, -12, 10, -14, 6, -18], rV = [-8, 10, -6, 12, -10, 7, -12, 9, -7, 11, -9, 6, -11, 8];
+      rows.forEach((row) => {
+        const s0 = L[row.i0], s1 = L[row.i1];
+        const span = Math.abs(pts[row.i1][0] - pts[row.i0][0]);
+        const n = mob ? 5 : Math.max(5, Math.min(9, Math.round(span / 150)));
+        const inset = (s1 - s0) / (n * 2);
+        for (let j = 0; j < n; j++) {
+          const s = s0 + inset + (s1 - s0 - 2 * inset) * (n === 1 ? 0.5 : j / (n - 1));
+          if (row.f) { mk(s, 0, 0, 0, -1e9, 1, 0.95); continue; }
+          const m = (j + row.k * 3) % rA.length;
+          mk(s, rU[m], rV[m], rA[m], row.y - vh * 0.64 + j * vh * 0.012, vh * 0.3, zo(pAt(s)[1]));
+        }
+      });
+      const nF = mob ? 4 : 5;
+      const Ls = L[iU] + (mob ? 40 : 60), Le = tot - (mob ? 26 : 44);
+      for (let i = 0; i < nF; i++) mk(Ls + (Le - Ls) * (i / (nF - 1)), 0, 0, 0, -1e9, 1, 0.95);
+      const d = 'M ' + pts.map((p) => p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' L ');
+      this._wgeo = { lenAtTip: lenAtTip, keyF: K[iF], Lf: L[iF], tot: tot, H: H, br: br };
+      const key = d + '|' + br.length + '|' + H + '|' + groups.map((g) => g.c).join(',');
+      if (key !== this._wkey) {
+        this._wkey = key;
+        const f = (n) => n.toFixed(1);
+        const gp = (i) => groups[i] || { c: 'transparent', d: 'M 0 0' };
+        this.setState({ wire: {
+          vb: '0 0 ' + W + ' ' + H, w: W, h: H, d: d,
+          clipL: clipL || 'M 0 0', clipD: clipD || 'M 0 0',
+          g0d: gp(0).d, g0c: gp(0).c, g1d: gp(1).d, g1c: gp(1).c, g2d: gp(2).d, g2c: gp(2).c, g3d: gp(3).d, g3c: gp(3).c,
+          brackets: br.map((b, i) => ({ k: i, x: f(b.x), y: f(b.y) }))
+        } }, () => this.applyWire());
+      } else {
+        this.applyWire();
+      }
+    } catch (e) {}
+  }
+  applyWire() {
+    const g = this._wgeo, root = this._wroot;
+    if (!g || !root) return;
+    let reduce = false;
+    try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    const vh = window.innerHeight || 800;
+    const sy = -root.getBoundingClientRect().top;
+    const done = reduce || vh >= g.H - 40;
+    let wp = 1;
+    if (!done) {
+      const tip = sy + vh * 0.8;
+      if (tip < g.keyF) {
+        wp = g.lenAtTip(tip) / g.tot;
+      } else {
+        const sF = g.keyF - vh * 0.8, sM = Math.max(sF + 1, g.H - vh);
+        const fp = Math.min(1, Math.max(0, (sy - sF) / (sM - sF)));
+        wp = (g.Lf + (g.tot - g.Lf) * fp) / g.tot;
+      }
+    }
+    const paths = root.querySelectorAll('.wire-path');
+    for (let i = 0; i < paths.length; i++) {
+      paths[i].style.strokeDasharray = g.tot.toFixed(1) + ' ' + (g.tot + 10).toFixed(1);
+      paths[i].style.strokeDashoffset = (g.tot * (1 - wp)).toFixed(1);
+    }
+    const els = root.querySelectorAll('.brk');
+    for (let i = 0; i < els.length && i < g.br.length; i++) {
+      const b = g.br[i];
+      const p = done ? 1 : Math.min(1, Math.max(0, (sy - b.t) / b.r));
+      const q = 1 - (1 - p) * (1 - p);
+      const vis = done ? 1 : Math.min(1, Math.max(0, (wp - b.lf) * 60));
+      els[i].style.opacity = String(b.o * vis);
+      els[i].style.transform = 'translate(' + (b.dx * (1 - q)).toFixed(2) + 'px, ' + (b.dy * (1 - q)).toFixed(2) + 'px) rotate(' + (b.rot + b.a0 * (1 - q)).toFixed(2) + 'deg)';
+    }
+  }
+  nowInIsrael() {
+    try {
+      const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Jerusalem', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date());
+      const get = (t) => (parts.find((p) => p.type === t) || {}).value;
+      const map = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+      return { d: map[get('weekday')], m: parseInt(get('hour'), 10) * 60 + parseInt(get('minute'), 10) };
+    } catch (e) {
+      const n = new Date();
+      return { d: n.getDay(), m: n.getHours() * 60 + n.getMinutes() };
+    }
+  }
+  renderVals() {
+    const H = { 0: [510, 1080], 2: [510, 1080], 3: [510, 1020], 5: [480, 720] };
+    const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const fmt = (x) => Math.floor(x / 60) + ':' + String(x % 60).padStart(2, '0');
+    const { d, m } = this.nowInIsrael();
+    let open = false, detail = '';
+    if (H[d] && m >= H[d][0] && m < H[d][1]) { open = true; detail = 'until ' + fmt(H[d][1]) + ' today'; }
+    else if (H[d] && m < H[d][0]) { detail = 'opens today at ' + fmt(H[d][0]); }
+    else {
+      for (let i = 1; i <= 7; i++) {
+        const k = (d + i) % 7;
+        if (H[k]) { detail = 'opens ' + (i === 1 ? 'tomorrow' : DAYS[k]) + ' at ' + fmt(H[k][0]); break; }
+      }
+    }
+    const hours = DAYS.map((name, i) => ({
+      day: name,
+      time: H[i] ? fmt(H[i][0]) + '–' + fmt(H[i][1]) : 'Closed',
+      todayTag: i === d ? ' · today' : '',
+      weight: i === d ? 600 : 400,
+      color: i === d ? '#FFFFFF' : (H[i] ? '#E4E4F2' : '#B9B8D6')
+    }));
+    const reviews = [
+      { t: "Dr. Paley is always very thorough in his treatment approach and is always striving for excellence. My son always feels very comfortable in his hands.", n: "Shira" },
+      { t: "Dr Paley is really great! Really tries to get to the root of problems and actually solve them. To say it simply- he actually cares.", n: "Binyamin" },
+      { t: "I’m so happy he changed my life!!!!  I am 40 years old and after I went to five doctors and they could not help me, he made my dream come true!", n: "Ariella" },
+      { t: "Dr. Paley is amazing and attentive to each patient.", n: "Esther" },
+      { t: "This is definitely the best orthodontist there is!", n: "Sarah" },
+      { t: "Dr Paley is now treating my fourth child and we couldn’t be happier. He is an expert in his field and has endless patience with his patients. The results are perfect!!", n: "Gila" },
+      { t: "We love Paley Orthodontics. Dr Paley is the best! All four of my kids have been treated here with wonderful results. I highly recommend them.", n: "David" },
+      { t: "THANK YOU! for your professionalism, honesty, integrity and a beautiful smile.  Dr. Paley has a warmly affectionate personality. He even draws me pictures to help me understand the artistic science of orthodontics. Dr. Paley found a workaround because I'm allergic to metal.", n: "Rina" },
+      { t: "Dr. Paley is amazing. Five stars!  So kind and patient. I highly recommend!!!!", n: "Irene" }
+    ];
+    const r = this.state.r, N = reviews.length;
+    return {
+      statusLabel: open ? 'Open now' : 'Closed now',
+      statusDetail: detail,
+      statusDotLight: open ? '#5FD394' : '#F0A58D',
+      hours,
+      reviewText: reviews[r].t,
+      reviewName: reviews[r].n,
+      reviewCount: (r + 1) + ' of ' + N,
+      reviewNames: reviews.map((x, i) => ({
+        name: x.n,
+        pressed: i === r ? 'true' : 'false',
+        line: i === r ? '#302B79' : 'transparent',
+        color: i === r ? '#302B79' : '#4F4E68',
+        pick: () => this.setState({ r: i, flip: !this.state.flip })
+      })),
+      prevReview: () => this.setState({ r: (r + N - 1) % N, flip: !this.state.flip }),
+      nextReview: () => this.setState({ r: (r + 1) % N, flip: !this.state.flip }),
+      autoNext: () => { if (!this.state.paused) this.setState({ r: (this.state.r + 1) % N, flip: !this.state.flip }); },
+      rA: !this.state.flip,
+      rB: this.state.flip,
+      qbarClass: this.state.paused ? 'is-paused' : '',
+      reviewLive: this.state.paused ? 'polite' : 'off',
+      togglePlay: () => this.setState({ paused: !this.state.paused }),
+      playLabel: this.state.paused ? 'Play' : 'Pause',
+      playAria: this.state.paused ? 'Play reviews' : 'Pause reviews',
+      dotClass: open ? 'live-dot' : '',
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      submit: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ sent: true }); },
+      menuOpen: this.state.menu,
+      menuExpanded: this.state.menu ? 'true' : 'false',
+      menuLabel: this.state.menu ? 'Close' : 'Menu',
+      toggleMenu: () => this.setState({ menu: !this.state.menu }),
+      wireOn: !!this.state.wire,
+      wire: this.state.wire || {},
+      closeMenu: () => this.setState({ menu: false })
+    };
+  }
+}
+</script>
+</body>
+</html>
