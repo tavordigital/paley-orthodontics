@@ -9,6 +9,8 @@ import { parseDocument } from 'htmlparser2';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = join(ROOT, 'site');
 const SITE_URL = 'https://braces.co.il';
+// Web3Forms access key (free, made at web3forms.com with the office email). Set WEB3FORMS_KEY in Vercel.
+const WEB3FORMS_KEY = process.env.WEB3FORMS_KEY || '';
 
 const PAGES = {
   index: { file: 'index.dc.html', description: 'Paley Orthodontics in Modiin: American-trained orthodontist Dr. Jonathan Paley, treating children and adults. Damon System, Invisalign and clear ceramic braces.' },
@@ -77,7 +79,8 @@ mkdirSync(join(OUT, 'js'), { recursive: true });
 mkdirSync(join(OUT, 'assets'), { recursive: true });
 
 copyFileSync(join(ROOT, 'node_modules/preact/dist/preact.module.js'), join(OUT, 'js/preact.module.js'));
-copyFileSync(join(ROOT, 'src/runtime.js'), join(OUT, 'js/runtime.js'));
+if (!WEB3FORMS_KEY) console.warn('WARNING: WEB3FORMS_KEY is not set, so the contact forms will show an error instead of sending.');
+writeFileSync(join(OUT, 'js/runtime.js'), readFileSync(join(ROOT, 'src/runtime.js'), 'utf8').replace('__WEB3FORMS_KEY__', WEB3FORMS_KEY));
 for (const f of readdirSync(join(ROOT, 'src/assets'))) copyFileSync(join(ROOT, 'src/assets', f), join(OUT, 'assets', f));
 
 for (const [name, page] of Object.entries(PAGES)) {
@@ -101,7 +104,9 @@ for (const [name, page] of Object.entries(PAGES)) {
 <link rel="alternate" hreflang="he" href="https://braces.co.il/he">
 <meta property="og:title" content="${title}">
 <meta property="og:description" content="${page.description}">
-<meta property="og:image" content="/assets/hp1-jp.webp">
+<meta property="og:url" content="${url}">
+<meta property="og:type" content="website">
+<meta property="og:image" content="${SITE_URL}/assets/hp1-jp.webp">
 <link rel="icon" type="image/png" href="/assets/favicon.png">
 ${helmet.trim()}
 </head>
@@ -109,7 +114,7 @@ ${helmet.trim()}
 <div id="app"></div>
 <noscript><p style="padding:24px;font-family:sans-serif">Paley Orthodontics · 37 Yigael Yadin, Modiin · 08-972-9410 · smile@braces.co.il</p></noscript>
 <script type="module">
-import { DCLogic, mount } from '/js/runtime.js';
+import { DCLogic, mount, sendForm } from '/js/runtime.js';
 ${logic.trim()}
 mount(${JSON.stringify(tree)}, Component);
 </script>
@@ -119,3 +124,12 @@ mount(${JSON.stringify(tree)}, Component);
   writeFileSync(join(OUT, name + '.html'), html);
   console.log('built', name + '.html', (html.length / 1024).toFixed(0) + ' KB');
 }
+
+const urls = Object.keys(PAGES).map((name) => SITE_URL + (name === 'index' ? '/' : '/' + name));
+writeFileSync(join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map((u) => `<url><loc>${u}</loc></url>`).join('\n')}
+</urlset>
+`);
+writeFileSync(join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+console.log('built sitemap.xml, robots.txt');

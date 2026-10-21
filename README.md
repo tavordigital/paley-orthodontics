@@ -17,7 +17,7 @@ Page sources live in `src/pages/`, images in `src/assets/`. `npm run build` turn
 3. Click **Deploy**. Every push to `main` redeploys automatically.
 
 ## Before launch
-- The consultation form on the homepage and contact page does not send anywhere yet. Connect it to a form service (Formspree, Web3Forms or similar) before going live.
+- The consultation forms send by email through Web3Forms. Create a free access key at web3forms.com with the office email, then add it in Vercel → Project → Settings → Environment Variables as `WEB3FORMS_KEY` and redeploy. Without it, the forms show an error asking visitors to call.
 - Add the domain braces.co.il in Vercel → Project → Settings → Domains.
 
 ## Local preview

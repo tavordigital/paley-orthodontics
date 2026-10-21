@@ -20,6 +20,7 @@ a{color:#302B79}a:hover{color:#17163A}
 .navlink:hover{color:#302B79;border-bottom-color:#5CB0E5}
 .btn-primary{background:#302B79;color:#FFFFFF;text-decoration:none}
 .btn-primary:hover{background:#17163A;color:#FFFFFF}
+.btn-primary:disabled{opacity:.6;cursor:wait}
 .btn-ghost{color:#302B79;text-decoration:none;box-shadow:inset 0 0 0 1.5px #302B79}
 .btn-ghost:hover{background:#302B79;color:#FFFFFF}
 .opt{background:transparent;color:#FFFFFF;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.45)}
@@ -647,7 +648,11 @@ main section + section img[style*="aspect-ratio"]{animation:unveil linear both;a
 <label for="f-msg" style="font-weight: 600; font-size: 16px">Message</label>
 <textarea id="f-msg" class="field" name="message" rows="4" style="resize: vertical"></textarea>
 </div>
-<button type="submit" class="btn-primary" style="min-height: 56px; border: 0; border-radius: 999px; font: inherit; font-size: 18px; font-weight: 600; cursor: pointer">Send</button>
+<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none">
+<button type="submit" class="btn-primary" disabled="{{sending}}" style="min-height: 56px; border: 0; border-radius: 999px; font: inherit; font-size: 18px; font-weight: 600; cursor: pointer">{{sendLabel}}</button>
+<sc-if value="{{failed}}" hint-placeholder-val="{{ false }}">
+<p role="alert" style="margin: 0; font-size: 16px; color: #B42318">Sorry, your message could not be sent. Please call <a class="textlink" href="tel:+97289729410" style="font-weight: 600">08-972-9410</a> or email <a class="textlink" href="mailto:smile@braces.co.il" style="font-weight: 600">smile@braces.co.il</a>.</p>
+</sc-if>
 </form>
 </sc-if>
 <sc-if value="{{sent}}" hint-placeholder-val="{{ false }}">
@@ -1199,7 +1204,17 @@ class Component extends DCLogic {
 
       sent: this.state.sent,
       notSent: !this.state.sent,
-      submit: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ sent: true }); },
+      sending: !!this.state.sending,
+      failed: !!this.state.failed,
+      sendLabel: this.state.sending ? 'Sending…' : 'Send',
+      submit: (e) => {
+        e.preventDefault();
+        if (this.state.sending) return;
+        this.setState({ sending: true, failed: false });
+        sendForm(e.target, 'Consultation request (homepage)')
+          .then(() => this.setState({ sent: true, sending: false }))
+          .catch(() => this.setState({ sending: false, failed: true }));
+      },
 
       menuOpen: this.state.menu,
       menuExpanded: this.state.menu ? 'true' : 'false',

@@ -21,6 +21,7 @@ a{color:#302B79}a:hover{color:#17163A}
 .navlink[aria-current="page"]{color:#302B79;border-bottom-color:#302B79;font-weight:600}
 .btn-primary{background:#302B79;color:#FFFFFF;text-decoration:none}
 .btn-primary:hover{background:#17163A;color:#FFFFFF}
+.btn-primary:disabled{opacity:.6;cursor:wait}
 .btn-ghost{color:#302B79;text-decoration:none;box-shadow:inset 0 0 0 1.5px #302B79}
 .btn-ghost:hover{background:#302B79;color:#FFFFFF}
 .textlink{color:#302B79;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1.5px}
@@ -193,24 +194,27 @@ header{animation:headerin linear both;animation-timeline:scroll(root);animation-
 <form class="formcard load-rise d3" onSubmit="{{submit}}" style="display: flex; flex-direction: column; gap: 18px; background: #FFFFFF; border-radius: 20px; padding: 32px">
 <div style="display: flex; flex-direction: column; gap: 6px">
 <label for="c-name" style="font-weight: 600; font-size: 16px">Full name <span style="font-weight: 400; color: #4F4E68">(required)</span></label>
-<input id="c-name" class="field" type="text" name="FullName" autocomplete="name" required="required">
+<input id="c-name" class="field" type="text" name="name" autocomplete="name" required="required">
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 18px">
 <div style="display: flex; flex-direction: column; gap: 6px">
 <label for="c-phone" style="font-weight: 600; font-size: 16px">Phone <span style="font-weight: 400; color: #4F4E68">(required)</span></label>
-<input id="c-phone" class="field" type="tel" name="Phone" autocomplete="tel" inputmode="tel" required="required">
+<input id="c-phone" class="field" type="tel" name="phone" autocomplete="tel" inputmode="tel" required="required">
 </div>
 <div style="display: flex; flex-direction: column; gap: 6px">
 <label for="c-email" style="font-weight: 600; font-size: 16px">Email <span style="font-weight: 400; color: #4F4E68">(required)</span></label>
-<input id="c-email" class="field" type="email" name="Email" autocomplete="email" required="required">
+<input id="c-email" class="field" type="email" name="email" autocomplete="email" required="required">
 </div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 6px">
 <label for="c-msg" style="font-weight: 600; font-size: 16px">Message</label>
 <textarea id="c-msg" class="field" name="message" rows="5" style="resize: vertical"></textarea>
 </div>
-<button type="submit" class="btn-primary" style="min-height: 56px; border: 0; border-radius: 999px; font: inherit; font-size: 18px; font-weight: 600; cursor: pointer">Send</button>
-<p style="margin: 0; font-size: 13px; color: #4F4E68">This site is protected by reCAPTCHA and the Google <a class="textlink" href="https://policies.google.com/privacy">Privacy Policy</a> and <a class="textlink" href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display: none">
+<button type="submit" class="btn-primary" disabled="{{sending}}" style="min-height: 56px; border: 0; border-radius: 999px; font: inherit; font-size: 18px; font-weight: 600; cursor: pointer">{{sendLabel}}</button>
+<sc-if value="{{failed}}" hint-placeholder-val="{{ false }}">
+<p role="alert" style="margin: 0; font-size: 16px; color: #B42318">Sorry, your message could not be sent. Please call <a class="textlink" href="tel:+97289729410" style="font-weight: 600">08-972-9410</a> or email <a class="textlink" href="mailto:smile@braces.co.il" style="font-weight: 600">smile@braces.co.il</a>.</p>
+</sc-if>
 </form>
 </sc-if>
 <sc-if value="{{sent}}" hint-placeholder-val="{{ false }}">
@@ -246,6 +250,7 @@ header{animation:headerin linear both;animation-timeline:scroll(root);animation-
 <a class="btn-primary" href="https://waze.com/ul?q=37%20Yigael%20Yadin%2C%20Modiin&amp;navigate=yes" style="display: flex; align-items: center; min-height: 52px; padding: 0 24px; border-radius: 999px; font-weight: 600">Navigate with Waze</a>
 <a class="btn-ghost" href="tel:+97289729410" style="display: flex; align-items: center; min-height: 52px; padding: 0 22px; border-radius: 999px; font-weight: 600">Call the office</a>
 </div>
+<iframe title="Map: Paley Orthodontics, 37 Yigael Yadin, Modiin" src="https://www.google.com/maps?q=37%20Yigael%20Yadin%2C%20Modiin%2C%20Israel&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width: 100%; height: 300px; border: 0; border-radius: 20px; display: block"></iframe>
 </div>
 
 <div class="load-rise d5" style="background: #302B79; color: #FFFFFF; border-radius: 20px; padding: 32px">
@@ -655,7 +660,17 @@ class Component extends DCLogic {
       dotClass: open ? 'live-dot' : '',
       sent: this.state.sent,
       notSent: !this.state.sent,
-      submit: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ sent: true }); },
+      sending: !!this.state.sending,
+      failed: !!this.state.failed,
+      sendLabel: this.state.sending ? 'Sending…' : 'Send',
+      submit: (e) => {
+        e.preventDefault();
+        if (this.state.sending) return;
+        this.setState({ sending: true, failed: false });
+        sendForm(e.target, 'Message from the contact page')
+          .then(() => this.setState({ sent: true, sending: false }))
+          .catch(() => this.setState({ sending: false, failed: true }));
+      },
       menuOpen: this.state.menu,
       menuExpanded: this.state.menu ? 'true' : 'false',
       menuLabel: this.state.menu ? 'Close' : 'Menu',

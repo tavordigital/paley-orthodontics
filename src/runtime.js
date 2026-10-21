@@ -87,3 +87,17 @@ export function mount(tree, Comp) {
   };
   render(h(Comp, {}), document.getElementById('app'));
 }
+
+// Sends a form to the office by email through Web3Forms. The build fills in the access key.
+const FORM_KEY = '__WEB3FORMS_KEY__';
+
+export function sendForm(form, subject) {
+  const data = Object.fromEntries(new FormData(form));
+  return fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify({ ...data, access_key: FORM_KEY, subject, from_name: 'braces.co.il', page: location.href })
+  })
+    .then((r) => r.json())
+    .then((j) => { if (!j.success) throw new Error(j.message || 'Send failed'); });
+}
