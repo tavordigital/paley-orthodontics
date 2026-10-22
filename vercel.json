@@ -2,5 +2,10 @@
   "buildCommand": "npm run build",
   "outputDirectory": "site",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/modiin-orthodontics-for-children", "destination": "/children", "permanent": true },
+    { "source": "/modiin-orthodontics-for-adults", "destination": "/adults", "permanent": true },
+    { "source": "/contact-us", "destination": "/contact", "permanent": true }
+  ]
 }
